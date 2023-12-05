@@ -5,11 +5,13 @@
     /* limits */
     margin: 0;
 }
-body{
+body{  
     margin:0;
+    padding: 0;
+    overflow: hidden;
     background-color: #071b21;
 }
-h1{
+.navbar h1{
     color:#CEC7BF;
     margin-left: 10px;
     font-size: 30px;
@@ -18,12 +20,12 @@ h1{
 .navbar{
     background-color:#3D737F;
     border-radius:  0 0 25px 25px;
-    padding: 10px;
     box-shadow: 0px 10px 10px rgba(245, 236, 236, 0.218) ;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    width:auto;
 }
 .navbar a{
     text-decoration: none;
@@ -48,6 +50,87 @@ h1{
     color:#3D737F;
     background-color: #CEC7BF;
 }
+.container{
+        background-size: cover;
+        margin: 0;
+        padding: 0 5%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; /* Change from flex-start to center */
+    }
+    .mainPic {
+        margin: 35px 10px 10px 710px;
+        z-index: 1; /* Ensure the image is above the text */
+        width:500px;
+    }
+    
+    .welcome {
+        margin-top: 40px;
+        font-size: 30px;
+        line-height: 1.2em;
+        letter-spacing: -1px;
+        text-align: left;
+        color: #CEC7BF;
+        position: absolute;
+        z-index: 2; /* Place the text above the image */
+        top: 50%; /* Adjust as needed */
+        left: 150px; /* Adjust as needed */
+        transform: translateY(-50%); /* Vertically center the text */
+    }
+    @keyframes reveal {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+    .welcome .hi{
+        margin:5px;
+        padding:5px;
+        font-family: "Lenora Premium Bold"; 
+        text-shadow:1px 1px 8px rgba(245, 236, 236, 0.189) ;
+        font-size: 40px;
+        color: #3D737F;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: reveal 3s linear infinite;
 
-
+    }
+    .welcome p{
+        font-size: 18px;
+        margin-top: 20px;
+        color: #CEC7BF;
+    }
+    .shooting-star {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: #fff;
+        transform: rotate(45deg);
+        animation: shootingStar 5s linear infinite;
+        z-index: -1000;
+        transform: translateX(50%) rotateZ(45deg);
+      }
+  
+      @keyframes shootingStar {
+        0% {
+          transform: translate(0, 0) rotate(45deg);
+          opacity: 0;
+        }
+  
+        50% {
+          transform: translate(-50%, 80%) rotate(45deg);
+          opacity: 1;
+        }
+  
+        100% {
+          transform: translate(-100%, 100%) rotate(45deg);
+          opacity: 0;
+        }
+      }
+    
 
