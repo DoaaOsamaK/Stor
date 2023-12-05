@@ -19,7 +19,32 @@
         <a href="./codes/contact.html">Contact</a>
         <a href="./codes/login.html">Log in</a>
        </nav>
-      
+       </section>
+      <section  class="content">
+        <div class="container">
+            <img class="mainPic" src="imgs/background/woman.png">
+            <article class="welcome">
+                <h1>Welcome to your special stor <div class="hi"> Augalassia ! </div>  </h1>
+                <p>Welcome to our accessories wonderland,<br> where style meets expression and every accessory tells a unique story!<br> Our store is a sanctuary for fashion enthusiasts and trendsetters,<br> a place where the artistry of accessories comes to life.</p>
+                <div class="con"></div>
+            </article>
+        </div>
+      </section>
+      <div id="shooting-stars-container">
+    </div>
+      <script>
+    const container = document.getElementById('shooting-stars-container');
+
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.classList.add('shooting-star');
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 10 + 's';
+
+      container.appendChild(star);
+    }
+  </script>
        </body>
        
 </html>
